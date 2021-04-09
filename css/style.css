@@ -84,6 +84,12 @@ header .menu-container {
 }
 
 /* Menu Dropdown */
+.menu-container .dropdown {
+    display: none;
+}
+.menu-container .dropdown.show {
+    display: block;
+}
 .menu-container .menu.menu-dropdown {
     flex-direction: column;
     position: absolute;
@@ -93,12 +99,7 @@ header .menu-container {
     width: max-content;
     box-shadow: rgb(0 0 0 / 4%) 0px 0px 4px 0px, rgb(0 0 0 / 8%) 0px 8px 16px 0px;
 }
-.hide {
-    display: none;
-}
-.show {
-    display: block;
-}
+
 .menu.menu-dropdown li {
     padding: 0;
 }
