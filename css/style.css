@@ -8,4 +8,73 @@
 /* COMMON */
 body {
     font-family: 'Roboto', sans-serif;
+    font-weight: 500;
 }
+
+img {
+    width: 100%;
+    display: block;
+}
+
+/* HEADER */
+header {
+    padding: 40px 0;
+    font-size: 16px;
+}
+header .menu-container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+}
+
+.menu-container .logo {
+    width: 10%;
+}
+
+/* Menu */
+.menu-container .menu {
+    list-style-type: none;
+    display: flex;
+}
+
+.menu-container .menu > li > a {
+    text-decoration: none;
+    color: #a8aeb3;
+}
+.menu-container .menu > li > a:hover {
+    color: #030303;
+}
+
+/* Menu Left */
+.menu-container .menu-left .menu {
+    justify-content: space-around;
+}
+.menu-container .menu-left {
+    width: 25%;
+    padding-left: 10px;
+}
+.menu-left .menu > li:first-child > a {
+    color: #030303;
+}
+
+/* Menu Right */
+.menu-container .menu-right .menu {
+    justify-content: space-between;
+}
+.menu-container .menu-right {
+    width: 65%;
+    padding-left: 30px;
+}
+.menu-right .menu li i {
+    font-size: 10px;
+}
+
+/* Button */
+.menu-right .menu li a.button {
+    background-color: #eb008e;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;    
+}
+
