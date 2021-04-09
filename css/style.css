@@ -18,7 +18,7 @@ img {
 
 /* HEADER */
 header {
-    padding: 40px 0;
+    padding: 35px 0 40px;
     font-size: 16px;
 }
 header .menu-container {
@@ -39,6 +39,8 @@ header .menu-container {
 }
 .menu-container .menu li {
     position: relative;
+    padding-bottom: 10px;
+    padding-top: 15px;
 }
 
 .menu-container .menu > li > a {
@@ -50,9 +52,6 @@ header .menu-container {
 }
 
 /* Menu Left */
-/* .menu-container .menu-left .menu {
-    justify-content: space-around;
-} */
 .menu-container .menu-left {
     width: 25%;
     padding-left: 10px;
@@ -92,15 +91,19 @@ header .menu-container {
     left:0;
     transform: translateX(-25%);
     width: max-content;
-    margin-top: 10px;
     box-shadow: rgb(0 0 0 / 4%) 0px 0px 4px 0px, rgb(0 0 0 / 8%) 0px 8px 16px 0px;
+}
+.hide {
     display: none;
 }
 .show {
     display: block;
 }
+.menu.menu-dropdown li {
+    padding: 0;
+}
 .menu.menu-dropdown li a {
-    padding: 15px 40px;
+    padding: 20px 40px;
     display: block;
 }
 .menu.menu-dropdown li:first-child a{
