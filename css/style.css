@@ -41,6 +41,7 @@ header .menu-container {
     position: relative;
     padding-bottom: 10px;
     padding-top: 15px;
+    cursor: pointer;
 }
 
 .menu-container .menu > li > a {
@@ -80,7 +81,8 @@ header .menu-container {
     background-color: #eb008e;
     color: #fff;
     padding: 10px 20px;
-    border-radius: 30px;    
+    border-radius: 30px;  
+
 }
 
 /* Menu Dropdown */
