@@ -16,6 +16,15 @@ img {
     display: block;
 }
 
+/* Button */
+a.button,
+.menu-container .menu > li > a.button {
+    background-color: #eb008e;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 30px;  
+}
+
 /* HEADER */
 header {
     padding: 35px 0 40px;
@@ -48,8 +57,16 @@ header .menu-container {
     text-decoration: none;
     color: #a8aeb3;
 }
-.menu-container .menu > li > a:hover {
+/* .menu-container .menu > li > a:hover {
     color: #030303;
+} */
+.menu-container .menu > li > a.beta::after {
+    content: 'beta';
+    font-size: 12px;
+    color:#eb008e;
+    position: relative;
+    bottom: 14px;
+    font-weight: 500;
 }
 
 /* Menu Left */
@@ -57,12 +74,16 @@ header .menu-container {
     width: 25%;
     padding-left: 10px;
 }
+.menu-container .menu-left .menu {
+    justify-content: space-around;
+    padding: 0 25px;
+}
 .menu-container .menu-left li {
-    padding-left: 40px;
+    padding-left: 30px;
 }
-.menu-left .menu > li:first-child > a {
+/* .menu-left .menu > li:first-child > a {
     color: #030303;
-}
+} */
 
 /* Menu Right */
 .menu-container .menu-right .menu {
@@ -76,13 +97,9 @@ header .menu-container {
     font-size: 10px;
 }
 
-/* Button */
-.menu-right .menu li a.button {
-    background-color: #eb008e;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 30px;  
-
+/* Burger Menu Hidden */
+.menu-container .burger {
+    display: none;
 }
 
 /* Menu Dropdown */
@@ -114,4 +131,121 @@ header .menu-container {
 }
 .menu.menu-dropdown li:last-child a{
     padding-bottom: 20px;
+}
+
+/* MEDIA QUERIES */
+
+/* TABLET */
+@media all and (max-width:991px) {
+
+    .menu-container {
+        width: 95%;
+        justify-content: space-between;
+        align-items: center;
+    }
+    /* Logo */
+    .menu-container .logo {
+        min-width: 80px;
+    }
+    /* Menu Left & Rigth Hidden */
+    .menu-container .menu-left,
+    .menu-container .menu-right {
+        display: none;
+    }
+
+    /* Burger Menu */
+    .menu-container .burger {
+        display: block;
+    }
+
+    .menu-container .burger > i,
+    .menu-container .burger > a{
+        display: block;
+        text-decoration: none;
+        font-size: 25px;
+        color: #030303;
+    }
+
+    /* Slider Menu */
+    .menu-container .burger .slide-menu-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        width: 60%;
+        transform: translateX(100%);
+        transition: all .5s cubic-bezier(0.7,0,0.3,1);
+        background-color: #fff;
+    }
+    .menu-container .burger .slide-menu-container.active {
+        transform: translateX(0);
+        box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    }
+    /* Exit Icon */
+    .burger .slide-menu-container .exit-icon {
+        position: absolute;
+        right:20px;
+        top:20px;
+        height: 30px;
+        width: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #030303;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+
+    .menu-container .burger .slide-menu {
+        padding: 40px 10%;
+        overflow-y: auto;
+    }
+    
+    .menu-container .burger .slide-menu .menu {
+        flex-direction: column;
+    }
+    .menu-container .burger .slide-menu .menu li {
+        cursor: auto;
+        overflow-y: hidden;
+    }
+    .menu-container .burger .slide-menu .menu li > a {
+        display: inline-flex;
+        align-items: center
+    }
+    .menu-container .burger .slide-menu .menu li i {
+        font-size: 10px;
+    }
+    .burger .slide-menu .menu li a.button {
+        display: block;
+        width: max-content;
+    }
+
+    /* Dropdown Icons */
+    .burger .slide-menu .menu li .dropdown-icon {
+        margin-left: 20px;
+        height: 25px;
+        width: 25px;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid #030303;
+        border-radius: 3px;
+        cursor: pointer;
+    }
+    
+    
+    /* Dropdown Burger */
+    .burger .slide-menu .dropdown-burger {
+        display: none;
+    }
+
+    .burger .slide-menu .menu.menu-dropdown-burger {
+        padding-left: 20px;        
+    }
+
+    
 }
